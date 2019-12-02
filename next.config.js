@@ -1,4 +1,4 @@
-//const withCSS = require('@zeit/next-css');
+const withCSS = require('@zeit/next-css');
 const withOffline = require("next-offline");
 
 const NextWorkboxPlugin = require('next-workbox-webpack-plugin');
@@ -12,7 +12,7 @@ const nextConfig = {
       fs: 'empty'
     };
 
-/*     if (!isServer) {
+    if (!isServer) {
       config.module.rules
         .find(({ test }) => test.test('style.css'))
         .use.push({
@@ -21,7 +21,7 @@ const nextConfig = {
             includes: ['./pages/*.js', './components/*.js']
           }
         });
-    } */
+    }
     
     const workboxOptions = {
       clientsClaim: true,
@@ -80,8 +80,6 @@ const nextConfig = {
   }
 }
 
-module.exports = withOffline(nextConfig)
+// module.exports = withOffline(nextConfig)
 
-/* module.exports = withCSS({
-
-}); */
+module.exports = withCSS(nextConfig);

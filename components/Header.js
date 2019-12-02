@@ -27,10 +27,10 @@ class Header extends Component {
           <meta name="theme-color" content="#302ecd" />
           <link rel="manifest" href="/static/manifest.json" />
           <link rel="icon" href="/static/favicon.ico" />
-          <link
+{/*           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
-          ></link>
+          ></link> */}
         </Head>
         <Loader loading={this.state.loading} />
       </section>

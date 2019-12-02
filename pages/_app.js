@@ -1,5 +1,7 @@
 import App from "next/app";
 import { register, unregister } from 'next-offline/runtime'
+import Link from "next/link";
+import "bulma/css/bulma.min.css";
 
 import OfflineSupport from "../components/OfflineSupport";
 import Header from "../components/Header";
