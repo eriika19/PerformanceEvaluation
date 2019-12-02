@@ -1,0 +1,45 @@
+{
+  "name": "performance-evaluation",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "SET NODE_ENV=production && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eriika19/PerformanceEvaluation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eriika19/PerformanceEvaluation/issues"
+  },
+  "homepage": "https://github.com/eriika19/PerformanceEvaluation#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "bulma": "^0.8.0",
+    "express": "^4.17.1",
+    "hover.css": "^2.3.2",
+    "next": "^9.1.4",
+    "next-offline": "^4.0.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-reveal": "^1.2.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "css-purify-webpack-loader": "^1.0.1",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "next-workbox-webpack-plugin": "^2.1.1",
+    "prettier": "^1.19.1",
+    "webpack-pwa-manifest": "^4.1.1"
+  }
+}
