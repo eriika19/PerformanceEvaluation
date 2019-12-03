@@ -14,7 +14,7 @@ class QuestionBtn extends Component {
       <div className="has-text-centered">
         <Link as={`/question/${id}`} href={`/question?id=${id}`}>
           <button
-            className="button is-info is-outlined is-rounded"
+            className="button is-success is-outlined is-rounded"
             id={`question-${id}`}
             onMouseEnter={this.prefetchQuestionPage}
           >

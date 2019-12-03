@@ -5,12 +5,12 @@ const Dashboard = props => (
   <section id="dashboard">
     <div style={{ display: "flex", maxWidth: 900 }}>
       <Chart
-        width={400}
-        height={300}
+        width={1000}
+        height={600}
         chartType="ColumnChart"
         loader={<div>Loading Chart</div>}
         data={[
-          ["City", "2010 Population", "2000 Population"],
+          ["2019", "Enero - Junio", "Julio - Diciembre"],
           ["New York City, NY", 8175000, 8008000],
           ["Los Angeles, CA", 3792000, 3694000],
           ["Chicago, IL", 2695000, 2896000],
@@ -18,14 +18,14 @@ const Dashboard = props => (
           ["Philadelphia, PA", 1526000, 1517000]
         ]}
         options={{
-          title: "Population of Largest U.S. Cities",
-          chartArea: { width: "30%" },
+          title: "Métrica de crecimiento",
+          chartArea: { width: "70%" },
           hAxis: {
             title: "Total Population",
             minValue: 0
           },
           vAxis: {
-            title: "City"
+            title: "Métrica"
           }
         }}
         legendToggle

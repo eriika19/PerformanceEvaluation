@@ -33,8 +33,6 @@ class MyApp extends App {
       <div>
         <Header />
         <OfflineSupport />
-        <Nav />
-
         <Component {...pageProps} />
         <style global jsx>
           {`
@@ -56,6 +54,9 @@ class MyApp extends App {
             }
             html.has-navbar-fixed-top {
               padding-top: 8rem;
+            }
+            .button {
+              border-width:0.12rem;
             }
           `}
         </style>

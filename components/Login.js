@@ -44,7 +44,7 @@ const Login = () => (
         </div>
         <div className="field has-text-centered">
           <Link href="/home">
-            <button className="button is-succes is-outlined is-rounded">Login</button>
+            <button className="button is-success is-rounded">Login</button>
           </Link>
         </div>
       </form>

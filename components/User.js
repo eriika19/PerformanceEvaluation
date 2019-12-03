@@ -1,5 +1,5 @@
 const User = props => {
-  const { user, thumbnail } = props;
+  const { user, thumbnail, role } = props;
 
   return (
     <article className="media">
@@ -11,7 +11,7 @@ const User = props => {
       <div className="media-content">
         <div className="content">
           <p>
-            <strong>{user}</strong> <small>@johnsmith</small> <small>31m</small>
+            <strong>{user}</strong> <br /><small>{role}</small>
           </p>
         </div>
       </div>
