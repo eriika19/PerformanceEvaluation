@@ -2,7 +2,7 @@ import { Component } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-//import Fade from "react-reveal/Fade";
+import Fade from "react-reveal/Fade";
 
 //import Oops from "../components/Oops";
 import Layout from "../components/Layout";
@@ -21,6 +21,7 @@ class QuestionPage extends Component {
 
     return question ? (
       <Layout>
+        <Fade top>        
         <section id="interview" className="container">
           <Head>
             <title>Runa | Interview</title>
@@ -40,10 +41,14 @@ class QuestionPage extends Component {
             <div className="column">Esta es mi habilidad destacada</div>
           </section>
           <QuestionBtn text="Siguiente" id={nextID} />
-        </section>
+          </section>
+          </Fade>
       </Layout>
     ) : (
+      
       <Layout>
+        <Fade left>
+          
         <section id="interview" className="container">
           <Head>
             <title>Runa | Interview</title>
@@ -76,7 +81,8 @@ class QuestionPage extends Component {
             </Link>
           </div>
         </section>
-      </Layout>
+          </Fade>
+          </Layout>
     );
   }
 }

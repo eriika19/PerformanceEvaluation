@@ -1,4 +1,7 @@
+import Fade from "react-reveal/Fade";
+
 import Layout from "../components/Layout";
+
 
 const laboratorians = [
   "/assets/16655830.jpeg",
@@ -9,6 +12,8 @@ const laboratorians = [
 
 const Suggest = () => (
   <Layout>
+        <Fade top>        
+
     <section className="hero">
       <div className="hero-body">
         <div className="container">
@@ -29,7 +34,7 @@ const Suggest = () => (
       })}
       </div>
     </section>
-      
+      </Fade>
   </Layout>    
 );
 

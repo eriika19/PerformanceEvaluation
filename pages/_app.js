@@ -43,6 +43,9 @@ class MyApp extends App {
             .view {
               height: 100vh;
             }
+            .hide {
+              display: none;
+            }
             .is-purple {
               color: #8378f4;
             }

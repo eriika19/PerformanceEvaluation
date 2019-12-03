@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Head from "next/head";
+import Fade from "react-reveal/Fade";
 //import Link from "next/link";
 
 import Layout from "../components/Layout";
@@ -15,6 +16,8 @@ class Home extends Component {
 
     return (
       <Layout>
+        <Fade right>        
+        
         <section id="home" className="container">
           <Head>
             <title>Runa | Performance Evaluation</title>
@@ -29,7 +32,9 @@ class Home extends Component {
             </div>
           </section>
           <QuestionBtn text="Ir a encuesta" id={id + 1} />
-        </section>
+          </section>
+        </Fade>        
+          
       </Layout>
     );
   }

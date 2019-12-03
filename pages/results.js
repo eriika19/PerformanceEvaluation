@@ -2,7 +2,7 @@ import { Component } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-//import Fade from "react-reveal/Fade";
+import Fade from "react-reveal/Fade";
 
 //import Oops from "../components/Oops";
 import Layout from "../components/Layout";
@@ -13,7 +13,9 @@ import Dashboard from "../components/Dashboard";
 class ResultsPage extends Component {
   render() {
     return (
-      <Layout>
+        <Layout>
+        <Fade big cascade>        
+            
         <section id="interview" className="container">
           <Head>
             <title>Runa | Results</title>
@@ -27,7 +29,9 @@ class ResultsPage extends Component {
             </div>
           </section>
           <Dashboard />
-        </section>
+                </section>
+        </Fade>        
+                
       </Layout>
     );
   }
