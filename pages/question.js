@@ -1,6 +1,6 @@
-//import Link from "next/link";
 import { Component } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 //import Fade from "react-reveal/Fade";
 
@@ -58,6 +58,13 @@ class QuestionPage extends Component {
           <div className="column">Experimentamos constantemente</div>
           <div className="column">Tenemos libertad con responsabilidad</div>
         </section>
+        <div className="field has-text-centered">
+          <Link href="/suggest">
+            <button className="button is-succes is-outlined is-rounded">
+              Continuar
+            </button>
+          </Link>
+        </div>
       </section>
     );
   }
@@ -69,12 +76,18 @@ QuestionPage.getInitialProps = async ({ query: { id } }) => {
   const res = await fetch("https://sheetsu.com/apis/v1.0su/fdf10260eb2b");
   const data = await res.json();
 
-  const { question } = data[index];
 
-  return {
-    question,
-    id
-  };
+  if (data[index] !== undefined) {
+    const { question } = data[index];
+    return {
+      question,
+      id
+    };
+  } else {
+    return {
+      id
+    };
+  }
 };
 
 export default QuestionPage;
