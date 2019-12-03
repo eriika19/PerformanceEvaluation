@@ -1,6 +1,6 @@
 import App from "next/app";
 import { register, unregister } from 'next-offline/runtime'
-import Link from "next/link";
+//import Link from "next/link";
 import "bulma/css/bulma.min.css";
 
 import OfflineSupport from "../components/OfflineSupport";
@@ -36,8 +36,20 @@ class MyApp extends App {
         <style global jsx>
           {`
             body {
-              font-family: "Quicksand", sans-serif;
+              font-family: "Varela Round", sans-serif;
               font-weight: 500 !important;
+            }
+            .view {
+              height: 100vh;
+            }
+            .is-purple {
+              color: #8378f4;
+            }
+            .is-bg-purple {
+              background-color: #8378f4;
+            }
+            .is-bg-aqua {
+              backcolor: #64f4d9;
             }
           `}
         </style>
