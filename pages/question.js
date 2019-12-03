@@ -52,7 +52,7 @@ class QuestionPage extends Component {
             <User user="" thumbnail="/assets/Lizzie.jpg" />
             <div className="hero-body">
               <div className="container">
-                <h1 className="title"> ¡Gracias!</h1>
+                <h1 className="title"> ¡Genial!</h1>
                 <h2 className="subtitle">
                   Esto es lo que has mejorado este año
                 </h2>
