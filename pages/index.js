@@ -17,15 +17,16 @@ class Index extends Component {
           <Head>
             <title>Runa | Performance Evaluation</title>
           </Head>
-          <section class="hero">
-            <div class="hero-body">
-              <div class="container">
-                <h1 class="title">
-                  Hola, bienvenid@ a tu proceso de crecimiento
-                </h1>
-                <h2 class="subtitle">
-                  Hola, bienvenid@ a tu proceso de crecimiento
-                </h2>
+          <section className="hero">
+            <div className="hero-body">
+              <div className="container">
+                <h3 className="title is-3">
+                  ¡Hola!
+                </h3>
+                <br/>
+                <h4 className="subtitle is-4">
+                  Bienvenid@ a tu proceso de crecimiento
+                </h4>
               </div>
             </div>
           </section>
