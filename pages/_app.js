@@ -5,6 +5,7 @@ import "bulma/css/bulma.min.css";
 
 import OfflineSupport from "../components/OfflineSupport";
 import Header from "../components/Header";
+import Nav from "../components/Nav";
 
 
 class MyApp extends App {
@@ -32,6 +33,8 @@ class MyApp extends App {
       <div>
         <Header />
         <OfflineSupport />
+        {/* <Nav /> */}
+
         <Component {...pageProps} />
         <style global jsx>
           {`

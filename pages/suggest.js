@@ -1,4 +1,3 @@
-import Nav from "../components/Nav";
 
 const laboratorians = [
   "/assets/16655830.jpeg",
@@ -9,7 +8,6 @@ const laboratorians = [
 
 const Suggest = () => (
   <div>
-    <Nav />
     <section className="hero">
       <div className="hero-body">
         <div className="container">
