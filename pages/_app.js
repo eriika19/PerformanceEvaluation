@@ -1,10 +1,11 @@
 import App from "next/app";
 import { register, unregister } from 'next-offline/runtime'
-import Link from "next/link";
+//import Link from "next/link";
 import "bulma/css/bulma.min.css";
 
 import OfflineSupport from "../components/OfflineSupport";
 import Header from "../components/Header";
+import Nav from "../components/Nav";
 
 
 class MyApp extends App {
@@ -32,12 +33,29 @@ class MyApp extends App {
       <div>
         <Header />
         <OfflineSupport />
+        <Nav />
+
         <Component {...pageProps} />
         <style global jsx>
           {`
             body {
-              font-family: "Quicksand", sans-serif;
+              font-family: "Varela Round", sans-serif;
               font-weight: 500 !important;
+            }
+            .view {
+              height: 100vh;
+            }
+            .is-purple {
+              color: #8378f4;
+            }
+            .is-bg-purple {
+              background-color: #8378f4;
+            }
+            .is-bg-aqua {
+              backcolor: #64f4d9;
+            }
+            html.has-navbar-fixed-top {
+              padding-top: 8rem;
             }
           `}
         </style>
