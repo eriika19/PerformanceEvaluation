@@ -1,27 +1,23 @@
 import { Component } from "react";
 import Head from "next/head";
 
-class Home extends Component {
+import Login from "../components/Login";
+
+
+class Index extends Component {
 
 
   render() {
 
     return (
-      <section id="home">
+      <section id="index" className="container">
         <Head>
           <title>Runa | Performance Evaluation</title>
         </Head>
-        <section className="hero is-medium is-primary is-bold">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title">¡Hola!</h1>
-              <h2 className="subtitle">Somos Runa</h2>
-            </div>
-          </div>
-        </section>
+<Login/>
       </section>
     );
   }
 }
 
-export default Home;
+export default Index;
