@@ -33,7 +33,7 @@ class MyApp extends App {
       <div>
         <Header />
         <OfflineSupport />
-        {/* <Nav /> */}
+        <Nav />
 
         <Component {...pageProps} />
         <style global jsx>
@@ -53,6 +53,9 @@ class MyApp extends App {
             }
             .is-bg-aqua {
               backcolor: #64f4d9;
+            }
+            html.has-navbar-fixed-top {
+              padding-top: 8rem;
             }
           `}
         </style>
