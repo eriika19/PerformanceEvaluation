@@ -1,10 +1,11 @@
-
+import Navbar from "../components/Navbar"
 
 const laboratorians=['/assets/16655830.jpeg', '/assets/25912292.jpeg', '/assets/26350518.jpeg', '/assets/31043587.jpeg'] ;
 
 const Suggest = () => (
     <div>
-         <section className="hero">
+        <Navbar/>
+        <section className="hero">
           {/* <User user={user} thumbnail="/assets/Lizzie.jpg" /> */}
           <div className="hero-body">
             <div className="container">
