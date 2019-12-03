@@ -27,6 +27,10 @@ class Header extends Component {
           <meta name="theme-color" content="#302ecd" />
           <link rel="manifest" href="/static/manifest.json" />
           <link rel="icon" href="/static/favicon.ico" />
+          <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+          ></script>
         </Head>
         <Loader loading={this.state.loading} />
       </section>
