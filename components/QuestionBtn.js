@@ -14,13 +14,27 @@ class QuestionBtn extends Component {
       <div className="has-text-centered">
         <Link as={`/question/${id}`} href={`/question?id=${id}`}>
           <button
-            className="button is-success is-outlined is-rounded"
+            className="button is-orange is-rounded"
             id={`question-${id}`}
             onMouseEnter={this.prefetchQuestionPage}
           >
             {text}
           </button>
         </Link>
+        <style jsx global>
+          {`
+            .button.is-orange {
+              background: #f5a623;
+              color: #fff;
+              border: solid 1px #f5a623;
+            }
+            .button.is-orange:hover {
+              background: transparent;
+              color: #7a6ff0;
+              border: solid 1px #7a6ff0;
+            }
+          `}
+        </style>
       </div>
     );
   }

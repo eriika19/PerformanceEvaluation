@@ -11,10 +11,21 @@ const User = props => {
       <div className="media-content">
         <div className="content">
           <p>
-            <strong>{user}</strong> <br /><small>{role}</small>
+            <strong>{user}</strong> <br />
+            <small>{role}</small>
           </p>
         </div>
       </div>
+      <style jsx>
+        {`
+          @media (max-width: 1023px) {
+            .image {
+              margin-left: 1rem;
+              margin-right: 1rem;
+            }
+          }
+        `}
+      </style>
     </article>
   );
 };

@@ -59,7 +59,11 @@ class QuestionPage extends Component {
                   <figure className=" icon is-large">
                     <img className="" src="/assets/3.png" alt="point" />
                   </figure>
-                  <p className="">Esta es mi habilidad destacada</p>
+                  <p className="">
+                    Esta es mi <br />
+                    habilidad
+                    <br /> destacada
+                  </p>
                 </div>
               </div>
             </section>
@@ -76,6 +80,15 @@ class QuestionPage extends Component {
               align-items: center;
               justify-content: center;
               text-align: center;
+            }
+            .hvr-grow {
+              transition: all 0.3s ease-out;
+              border-radius: 58px;
+              min-width: 8.5rem;
+              padding: 1rem;
+            }
+            .hvr-grow:active {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             }
           `}
         </style>
