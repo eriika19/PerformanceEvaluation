@@ -31,8 +31,6 @@ class ResultsPage extends Component {
         filter.name.toLowerCase().indexOf(search) !== -1 ||
         filter.id.indexOf(search) !== -1
     );
-    console.log(typeof filterData);
-    console.log(filterData);
 
     if (filterData.length === 1) {
       return filterData;
@@ -61,12 +59,12 @@ class ResultsPage extends Component {
       } = filterData[0];
 
       const data = [
-        ["2019", "Jul - Dic"],
-        ["Colaboración", parseInt(Colaboración, 10)],
-        ["Liderazgo", parseInt(Liderazgo, 10)],
-        ["Innovación", parseInt(Innovación, 10)],
-        ["Responsabilidad", parseInt(Responsabilidad, 10)],
-        ["Creatividad", parseInt(Creatividad, 10)]
+        ["2019", "Jul - Dic", { role: "style" }],
+        ["Colaboración", parseInt(Colaboración, 10), 'stroke-color: #f5a623; stroke-opacity: 0.8; stroke-width: 4; fill-color: #7a6ff0; fill-opacity: 0.65'],
+        ["Liderazgo", parseInt(Liderazgo, 10), 'stroke-color: #f5a623; stroke-opacity: 0.8; stroke-width: 4; fill-color: #7a6ff0; fill-opacity: 0.65'],
+        ["Innovación", parseInt(Innovación, 10), 'stroke-color: #f5a623; stroke-opacity: 0.8; stroke-width: 4; fill-color: #7a6ff0; fill-opacity: 0.65'],
+        ["Responsabilidad", parseInt(Responsabilidad, 10), 'stroke-color: #f5a623; stroke-opacity: 0.8; stroke-width: 4; fill-color: #7a6ff0; fill-opacity: 0.65'],
+        ["Creatividad", parseInt(Creatividad, 10), 'stroke-color: #f5a623; stroke-opacity: 0.8; stroke-width: 4; fill-color: #7a6ff0; fill-opacity: 0.65']
       ];
 
       return { data, name };

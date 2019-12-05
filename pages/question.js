@@ -40,26 +40,26 @@ class QuestionPage extends Component {
             <section className="columns level">
               <div className="column level-item">
                 <div className="hvr-grow">
-                  <figure className=" icon is-large">
-                    <img className="" src="/assets/1.png" alt="point" />
+                  <figure className="icon is-large">
+                    <img src="/assets/1.png" alt="point" />
                   </figure>
-                  <p className="">Puedo mejorar</p>
+                  <p>Puedo mejorar</p>
                 </div>
               </div>
               <div className="column level-item">
                 <div className="hvr-grow">
                   <figure className=" icon is-large">
-                    <img className="" src="/assets/2.png" alt="point" />
+                    <img src="/assets/2.png" alt="point" />
                   </figure>
-                  <p className="">Soy bueno</p>
+                  <p>Soy bueno</p>
                 </div>
               </div>
               <div className="column level-item">
                 <div className="hvr-grow">
                   <figure className=" icon is-large">
-                    <img className="" src="/assets/3.png" alt="point" />
+                    <img src="/assets/3.png" alt="point" />
                   </figure>
-                  <p className="">
+                  <p>
                     Esta es mi <br />
                     habilidad
                     <br /> destacada
@@ -70,12 +70,8 @@ class QuestionPage extends Component {
             <QuestionBtn text="Siguiente" id={nextID} />
           </section>
         </Fade>
-        <style jsx global>
+        <style jsx>
           {`
-            .columns {
-              width: 100%;
-              min-height: 22vh;
-            }
             .column {
               align-items: center;
               justify-content: center;
@@ -107,52 +103,72 @@ class QuestionPage extends Component {
               <User user="" thumbnail="/assets/Lizzie.jpg" />
               <div className="hero-body">
                 <div className="container">
-                  <h1 className="title"> ¡Genial!</h1>
-                  <h2 className="subtitle">
-                    Esto es lo que has mejorado este año
+                  <h1 className="title is-spaced"> ¡Genial! </h1>
+                  <h2 className="subtitle has-text-centered">
+                    Esto es lo que has mejorado este año:
                   </h2>
                 </div>
               </div>
             </section>
             <section className="columns level">
               <div className="column level-item">
-                <div className="">
-                  <figure className=" icon is-large">
-                    <img className="" src="/assets/circle-hi.png" alt="point" />
+                <div className="hvr-icon-grow">
+                  <figure className="icon is-large">
+                    <img
+                      className="hvr-icon"
+                      src="/assets/circle-hi.png"
+                      alt="point"
+                    />
                   </figure>
-                  <p className="">Actuamos como owners</p>
+                  <p className="hvr-icon">Actuamos como owners</p>
                 </div>
               </div>
               <div className="column level-item">
-                <div className="">
-                  <figure className=" icon is-large">
+                <div className="hvr-icon-grow">
+                  <figure className="icon is-large">
                     <img className="" src="/assets/circle-hi.png" alt="point" />
                   </figure>
-                  <p className="">Jugamos en equipo</p>
+                  <p className="hvr-icon">Jugamos en equipo</p>
                 </div>
               </div>
               <div className="column level-item">
-                <div className="">
+                <div className="hvr-icon-grow">
                   <figure className=" icon is-large">
-                    <img className="" src="/assets/circle-hi.png" alt="point" />
+                    <img
+                      className="hvr-icon"
+                      src="/assets/circle-hi.png"
+                      alt="point"
+                    />
                   </figure>
                   <p className="">Aspiramos a la excelencia</p>
                 </div>
               </div>
             </section>
+            <br />
+            <h2 className="subtitle has-text-centered">
+              Tus áreas de oportunidad son:
+            </h2>
             <section className="columns level">
               <div className="column level-item">
-                <div className="">
+                <div className="hvr-icon-grow">
                   <figure className=" icon is-large">
-                    <img className="" src="/assets/circle-vi.png" alt="point" />
+                    <img
+                      className="hvr-icon"
+                      src="/assets/circle-vi.png"
+                      alt="point"
+                    />
                   </figure>
                   <p className="">Experimentamos constantemente</p>
                 </div>
               </div>
               <div className="column level-item">
-                <div className="">
+                <div className="hvr-icon-grow">
                   <figure className=" icon is-large">
-                    <img className="" src="/assets/circle-vi.png" alt="point" />
+                    <img
+                      className="hvr-icon"
+                      src="/assets/circle-vi.png"
+                      alt="point"
+                    />
                   </figure>
                   <p className="">Tenemos libertad con responsabilidad</p>
                 </div>
@@ -167,10 +183,9 @@ class QuestionPage extends Component {
             </div>
           </section>
         </Fade>
-        <style jsx global>
+        <style jsx>
           {`
             .columns {
-              width: 100%;
               min-height: 22vh;
             }
             .column {

@@ -80,7 +80,7 @@ class Nav extends Component {
               margin-left: 0.9rem;
             }
             span {
-              color: #7a6ff0 !important;
+              color: #7a6ff0;
             }
             @media (max-width: 1023px) {
               .navbar-menu {
