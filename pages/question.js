@@ -87,8 +87,11 @@ class QuestionPage extends Component {
               min-width: 8.5rem;
               padding: 1rem;
             }
-            .hvr-grow:active {
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            .hvr-grow:focus:not(:active) {
+              box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+            }
+            .hvr-grow:hover {
+              box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
             }
           `}
         </style>
