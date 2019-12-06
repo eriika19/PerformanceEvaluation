@@ -1,12 +1,10 @@
 import App from "next/app";
 import { register, unregister } from 'next-offline/runtime'
-//import Link from "next/link";
 import "bulma/css/bulma.min.css";
+import "hover.css/css/hover-min.css";
 
 import OfflineSupport from "../components/OfflineSupport";
 import Header from "../components/Header";
-import Nav from "../components/Nav";
-
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -34,11 +32,10 @@ class MyApp extends App {
         <Header />
         <OfflineSupport />
         <Component {...pageProps} />
-        <style global jsx>
+        <style jsx global>
           {`
             body {
               font-family: "Varela Round", sans-serif;
-              font-weight: 500 !important;
             }
             .view {
               height: 100vh;

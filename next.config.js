@@ -1,8 +1,9 @@
 const withCSS = require('@zeit/next-css');
 const withOffline = require("next-offline");
-
-const NextWorkboxPlugin = require('next-workbox-webpack-plugin');
+const { withPlugins, optional } = require('next-compose-plugins')
+//const compose = require('./scripts/next-compose');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const NextWorkboxPlugin = require('next-workbox-webpack-plugin');
 const path = require('path');
 
 const nextConfig = {
@@ -49,8 +50,8 @@ const nextConfig = {
         }),
         new WebpackPwaManifest({
           filename: 'static/manifest.json',
-          name: 'Runa | Performance Evaluation',
-          short_name: 'Performance Evaluation',
+          name: 'Runa | Performance Management',
+          short_name: 'Performance Management',
           description:
             'Web app for performance evaluation in Laboratoria',
           background_color: '#ffffff',
@@ -61,7 +62,7 @@ const nextConfig = {
           inject: false,
           start_url: '/',
           ios: {
-            'apple-mobile-web-app-title': 'Performance Evaluation',
+            'apple-mobile-web-app-title': 'Performance Management',
             'apple-mobile-web-app-status-bar-style': '#5755d9'
           },
           icons: [
@@ -80,6 +81,13 @@ const nextConfig = {
   }
 }
 
-// module.exports = withOffline(nextConfig)
+/* module.exports = withOffline(nextConfig)
+module.exports = withCSS(nextConfig); */
 
-module.exports = withCSS(nextConfig);
+ module.exports = withPlugins(
+  [
+    [withCSS],
+    [withOffline]
+  ],
+  nextConfig
+);

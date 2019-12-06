@@ -51,10 +51,9 @@ class Index extends Component {
             <Login />
           </section>
         </Fade>
-        <style jsx global>
+        <style jsx>
           {`
-            .splash {
-            }
+
           `}
         </style>
       </div>

@@ -3,14 +3,10 @@ import Head from "next/head";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import Fade from "react-reveal/Fade";
-import "hover.css/css/hover-min.css";
 
-
-//import Oops from "../components/Oops";
 import Layout from "../components/Layout";
 import User from "../components/User";
 import QuestionBtn from "../components/QuestionBtn";
-//import questionsData from "../data/questions";
 
 class QuestionPage extends Component {
   render() {
@@ -48,7 +44,7 @@ class QuestionPage extends Component {
               </div>
               <div className="column level-item">
                 <div className="hvr-grow">
-                  <figure className=" icon is-large">
+                  <figure className="icon is-large">
                     <img src="/assets/2.png" alt="point" />
                   </figure>
                   <p>Soy bueno</p>
@@ -56,13 +52,13 @@ class QuestionPage extends Component {
               </div>
               <div className="column level-item">
                 <div className="hvr-grow">
-                  <figure className=" icon is-large">
+                  <figure className="icon is-large">
                     <img src="/assets/3.png" alt="point" />
                   </figure>
                   <p>
                     Esta es mi <br />
-                    habilidad
-                    <br /> destacada
+                    habilidad<br /> 
+                    destacada
                   </p>
                 </div>
               </div>
@@ -80,7 +76,7 @@ class QuestionPage extends Component {
             .hvr-grow {
               transition: all 0.3s ease-out;
               border-radius: 58px;
-              min-width: 8.5rem;
+              min-width: 9rem;
               padding: 1rem;
             }
             .hvr-grow:focus:not(:active) {
@@ -103,7 +99,9 @@ class QuestionPage extends Component {
               <User user="" thumbnail="/assets/Lizzie.jpg" />
               <div className="hero-body">
                 <div className="container">
-                  <h1 className="title is-spaced"> ¡Genial! </h1>
+                  <h1 className="title"> ¡Genial! </h1>
+                  <br />
+                  <br />
                   <h2 className="subtitle has-text-centered">
                     Esto es lo que has mejorado este año:
                   </h2>
@@ -120,30 +118,35 @@ class QuestionPage extends Component {
                       alt="point"
                     />
                   </figure>
-                  <p className="hvr-icon">Actuamos como owners</p>
+                  <p>Actuamos como owners</p>
                 </div>
               </div>
               <div className="column level-item">
                 <div className="hvr-icon-grow">
                   <figure className="icon is-large">
-                    <img className="" src="/assets/circle-hi.png" alt="point" />
-                  </figure>
-                  <p className="hvr-icon">Jugamos en equipo</p>
-                </div>
-              </div>
-              <div className="column level-item">
-                <div className="hvr-icon-grow">
-                  <figure className=" icon is-large">
                     <img
                       className="hvr-icon"
                       src="/assets/circle-hi.png"
                       alt="point"
                     />
                   </figure>
-                  <p className="">Aspiramos a la excelencia</p>
+                  <p>Jugamos en equipo</p>
+                </div>
+              </div>
+              <div className="column level-item">
+                <div className="hvr-icon-grow">
+                  <figure className="icon is-large">
+                    <img
+                      className="hvr-icon"
+                      src="/assets/circle-hi.png"
+                      alt="point"
+                    />
+                  </figure>
+                  <p>Aspiramos a la excelencia</p>
                 </div>
               </div>
             </section>
+            <br />
             <br />
             <h2 className="subtitle has-text-centered">
               Tus áreas de oportunidad son:
@@ -158,7 +161,7 @@ class QuestionPage extends Component {
                       alt="point"
                     />
                   </figure>
-                  <p className="">Experimentamos constantemente</p>
+                  <p>Experimentamos constantemente</p>
                 </div>
               </div>
               <div className="column level-item">
@@ -170,7 +173,7 @@ class QuestionPage extends Component {
                       alt="point"
                     />
                   </figure>
-                  <p className="">Tenemos libertad con responsabilidad</p>
+                  <p>Tenemos libertad con responsabilidad</p>
                 </div>
               </div>
             </section>

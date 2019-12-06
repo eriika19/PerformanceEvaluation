@@ -1,13 +1,10 @@
 import { Component } from "react";
 import Head from "next/head";
-//import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 import Fade from "react-reveal/Fade";
 
-import Oops from "../components/Oops";
 import Layout from "../components/Layout";
 
-//import User from "../components/User";
 import Dashboard from "../components/Dashboard";
 
 class ResultsPage extends Component {
@@ -71,15 +68,6 @@ class ResultsPage extends Component {
     } else {
       return false;
     }
-
-    /*     const data = [
-      ["2019", "Ene - Jun", "Jul - Dic"],
-      ["Lizzie", 3, 5],
-      ["Hermán", 4, 4],
-      ["Ara", 5, 5],
-      ["Alpi", 3, 4],
-      ["Vania", 4, 4]
-    ]; */
   };
 
   handleChange = async e => {
@@ -87,7 +75,6 @@ class ResultsPage extends Component {
       const result = await this.getData(e.target.value);
       if (result) {
         const { data, name } = result;
-        // console.log(name, data);
 
         this.setState({
           searchName: name,
