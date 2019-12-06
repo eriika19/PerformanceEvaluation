@@ -1,5 +1,5 @@
 {
-  "name": "performance-evaluation",
+  "name": "performance-management",
   "version": 2,
   	"env": {
 		"NODE_ENV": "production"

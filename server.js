@@ -3,17 +3,17 @@ const { parse } = require('url');
 const next = require('next');
 const { join } = require('path');
 const express = require('express');
-//const cache = require('lru-cache'); // for using least-recently-used based caching
+const cache = require('lru-cache'); // for using least-recently-used based caching
 
 const port = parseInt(process.env.PORT, 10) || 8000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-/* const ssrCache = new cache({
+ const ssrCache = new cache({
   max: 20, // not more than 20 results will be cached
   maxAge: 1000 * 60 * 5 // 5 mins
-}); */
+});
 
 app.prepare().then(() => {
   const server = express();
