@@ -4,14 +4,12 @@ import Link from "next/link";
 
 import NavbarItem from "./NavbarItem";
 
-
 class Nav extends Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle;
   }
 
- 
   state = {
     navMenuOpen: ""
   };
@@ -27,25 +25,23 @@ class Nav extends Component {
       navMenuOpen: !this.state.navMenuOpen
     });
   };
-  
+
   render() {
-    const data= [
-        { "section": "Crecimiento", "route": "/" },
-        { "section": "Perfil", "route": "/" },
-        { "section": "Memorias de feedback", "route": "/" },
-        { "section": "Habilidades destacadas", "route": "/" },
-        { "section": "Personas que solicitan tu apoyo", "route": "/" }
-      ];
-    
+    const data = [
+      { section: "Crecimiento", route: "/" },
+      { section: "Perfil", route: "/" },
+      { section: "Memorias de feedback", route: "/" },
+      { section: "Habilidades destacadas", route: "/" },
+      { section: "Personas que solicitan tu apoyo", route: "/" }
+    ];
+
     return (
-      <nav
-        className= "navbar is-fixed-top"
-      >
+      <nav className="navbar is-fixed-top">
         <div className="container">
           <div className="navbar-brand">
-          <figure className="image is-128x128">
-  <img src="/assets/runa-logo.png"/>
-</figure>
+            <figure className="image is-128x128">
+              <img src="/assets/runa-logo.png" />
+            </figure>
             <span
               className={
                 this.state.navMenuOpen
@@ -55,14 +51,9 @@ class Nav extends Component {
               data-target="navbarMenuHeroB"
               onClick={this.toggle}
             >
-              <span
-                
-              ></span>
-              <span
-              ></span>
-              <span
-                
-              ></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </span>
           </div>
           <div
@@ -73,25 +64,28 @@ class Nav extends Component {
           >
             <div
               className={
-                this.state.navMenuOpen ?
-                "navbar-end is-active"
-                  : "navbar-end"
+                this.state.navMenuOpen ? "navbar-end is-active" : "navbar-end"
               }
             >
               {data.map((props, i) => (
-                <NavbarItem
-                  {...props}
-                  key={i}
-                />
+                <NavbarItem {...props} key={i} />
               ))}
-
             </div>
           </div>
         </div>
         <style jsx>
           {`
-            @media (max-width: 426px) {
-
+            .image img {
+              margin-top: 0.9rem;
+              margin-left: 0.9rem;
+            }
+            span {
+              color: #7a6ff0;
+            }
+            @media (max-width: 1023px) {
+              .navbar-menu {
+                height: 100vh;
+              }
             }
           `}
         </style>

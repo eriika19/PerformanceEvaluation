@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 const Login = () => (
-  <section id="login" className="columns is-centered">
-    <div className="column is-5-tablet is-4-desktop is-3-widescreen">
+  <section id="login" className="columns is-centered is-vcentered is-mobile">
+    <div className="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-third-fullhd">
       <form action="" className="box">
         <div className="field">
           <label htmlFor="" className="label">

@@ -9,7 +9,7 @@ class Error extends React.Component {
   render() {
     const { statusCode } = this.props;
     return (
-      <section className="container has-text-centered">
+      <section className="container has-text-centered is-centered is-vcentered">
         <p>
           <span>
             {statusCode ? (
