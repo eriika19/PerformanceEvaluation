@@ -71,7 +71,7 @@ const nextConfig = {
     };
 
     if (!isServer && !dev) {
-      const PUBLIC_PATH = "/static";
+      const PUBLIC_PATH = "..";
 
       config.plugins.push(
         new NextWorkboxPlugin({
@@ -80,7 +80,7 @@ const nextConfig = {
         }),
 
         new WebpackPwaManifest({
-          filename: "manifest.json",
+          filename: "static/manifest.json",
           name: "Runa | Performance Management",
           short_name: "Performance Management",
           description: "Web app for performance management in Laboratoria",
@@ -98,7 +98,7 @@ const nextConfig = {
           icons: [
             {
               src: path.resolve("static/favicon.ico"),
-              sizes: [96, 128, 192, 256, 384, 512],
+              sizes: [36, 48, 72, 96, 144, 192, 512],
               destination: "/static"
             },
             {
@@ -112,17 +112,10 @@ const nextConfig = {
               size: 1024,
               destination: "/static",
               ios: "startup"
-            },
-            {
-              src: path.resolve("static/favicon.ico"),
-              sizes: [36, 48, 72, 96, 144, 192, 512],
-              destination: "/static"
             }
           ],
           includeDirectory: true,
-          output: {
-            publicPath: PUBLIC_PATH
-          }
+          publicPath: PUBLIC_PATH
         })
       );
     }
@@ -131,6 +124,6 @@ const nextConfig = {
 };
 
 /* module.exports = withOffline(nextConfig)*/
-module.exports = withCSS(nextConfig); 
+module.exports = withCSS(nextConfig);
 
 //module.exports = withPlugins([[withCSS], [withOffline]], nextConfig);

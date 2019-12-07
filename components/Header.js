@@ -29,17 +29,20 @@ class Header extends Component {
           <meta name="theme-color" content="#000000" />
           <link rel="icon" href="/static/favicon.ico" />
           <link rel="manifest" href="/_next/static/manifest.json" />
-          <link rel="stylesheet" href="/_next/static/style.css" />
-{/*           <script
-            defer
-            src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-          ></script> */}
           <link
             href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
             rel="stylesheet"
           ></link>
         </Head>
         <Loader loading={this.state.loading} />
+        <style jsx global>
+          {`
+            .pageloader.is-active {
+              background-color: #8378f4;
+              color: #fff;
+            }
+          `}
+        </style>
       </section>
     );
   }
