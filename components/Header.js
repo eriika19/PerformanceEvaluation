@@ -24,14 +24,18 @@ class Header extends Component {
           <meta charSet="UTF-8" />
           <meta name="description" content="Performance Evaluation" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#302ecd" />
-          <link rel="manifest" href="/static/manifest.json" />
+          <meta name="theme-color" content="#000000" />
+          <link rel="manifest" href="/_next/static/manifest.json" />
           <link rel="icon" href="/static/favicon.ico" />
-          <script
+          <link rel="stylesheet" href="/_next/static/style.css" />
+{/*           <script
             defer
             src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-          ></script>
-          <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet"></link>
+          ></script> */}
+          <link
+            href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+            rel="stylesheet"
+          ></link>
         </Head>
         <Loader loading={this.state.loading} />
       </section>

@@ -1,5 +1,5 @@
 import App from "next/app";
-import { register, unregister } from 'next-offline/runtime'
+//import { register, unregister } from 'next-offline/runtime'
 import "bulma/css/bulma.min.css";
 import "hover.css/css/hover-min.css";
 
@@ -15,13 +15,6 @@ class MyApp extends App {
     }
 
     return { pageProps };
-  }
-
-  componentDidMount() {
-    register();
-  }
-  componentWillUnmount() {
-    unregister();
   }
 
   render() {
