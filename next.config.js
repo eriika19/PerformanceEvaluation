@@ -80,7 +80,6 @@ const nextConfig = {
         }),
 
         new WebpackPwaManifest({
-          // output: "static/",
           filename: "manifest.json",
           name: "Runa | Performance Management",
           short_name: "Performance Management",

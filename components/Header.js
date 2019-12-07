@@ -1,6 +1,8 @@
 import { Component } from "react";
 import Router from "next/router";
 import Head from "next/head";
+import "bulma-pageloader/dist/css/bulma-pageloader.min.css";
+
 
 class Header extends Component {
   state = { loading: false };
@@ -25,8 +27,8 @@ class Header extends Component {
           <meta name="description" content="Performance Evaluation" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#000000" />
-          <link rel="manifest" href="/_next/static/manifest.json" />
           <link rel="icon" href="/static/favicon.ico" />
+          <link rel="manifest" href="/_next/static/manifest.json" />
           <link rel="stylesheet" href="/_next/static/style.css" />
 {/*           <script
             defer
@@ -44,7 +46,7 @@ class Header extends Component {
 }
 
 const Loader = ({ loading }) => (
-  <div className={loading ? "loading-show" : ""} id="loader-bar" />
+  <div className={loading ? "pageloader is-active" : "pageloader"}><span class="title">Cargando</span></div>
 );
 
 export default Header;
