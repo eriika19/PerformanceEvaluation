@@ -123,7 +123,7 @@ const nextConfig = {
   }
 };
 
-/* module.exports = withOffline(nextConfig)*/
 module.exports = withCSS(nextConfig);
 
+//module.exports = withOffline(nextConfig)
 //module.exports = withPlugins([[withCSS], [withOffline]], nextConfig);

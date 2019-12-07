@@ -26,7 +26,7 @@ class Header extends Component {
           <meta charSet="UTF-8" />
           <meta name="description" content="Performance Evaluation" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#000000" />
+          <meta name="theme-color" content="#8378f4" />
           <link rel="icon" href="/static/favicon.ico" />
           <link rel="manifest" href="/_next/static/manifest.json" />
           <link
