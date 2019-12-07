@@ -1,5 +1,5 @@
 {
-  "name": "performance-evaluation",
+  "name": "performance-management",
   "version": "1.0.0",
   "description": "",
   "main": ".",
@@ -18,15 +18,19 @@
   "bugs": {
     "url": "https://github.com/eriika19/PerformanceEvaluation/issues"
   },
-  "homepage": "https://github.com/eriika19/PerformanceEvaluation#readme",
+  "homepage": "https://performance-management.now.sh/",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "@zeit/next-css": "^1.0.1",
     "bulma": "^0.8.0",
+    "bulma-pageloader": "^0.3.0",
     "express": "^4.17.1",
     "hover.css": "^2.3.2",
     "isomorphic-unfetch": "^3.0.0",
+    "lru-cache": "^5.1.1",
     "next": "^9.1.4",
-    "next-offline": "^4.0.6",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-google-charts": "^3.0.15",

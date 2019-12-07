@@ -1,12 +1,17 @@
 import App from "next/app";
-import { register, unregister } from 'next-offline/runtime'
-//import Link from "next/link";
 import "bulma/css/bulma.min.css";
+import "hover.css/css/hover-min.css";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the CSS
+config.autoAddCss = false;
+
+import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
+//import { fab } from "@fortawesome/free-brands-svg-icons";
+
+library.add( faEnvelope, faLock );
 
 import OfflineSupport from "../components/OfflineSupport";
 import Header from "../components/Header";
-import Nav from "../components/Nav";
-
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -19,13 +24,6 @@ class MyApp extends App {
     return { pageProps };
   }
 
-  componentDidMount() {
-    register();
-  }
-  componentWillUnmount() {
-    unregister();
-  }
-
   render() {
     const { Component, pageProps } = this.props;
 
@@ -34,11 +32,10 @@ class MyApp extends App {
         <Header />
         <OfflineSupport />
         <Component {...pageProps} />
-        <style global jsx>
+        <style jsx global>
           {`
             body {
               font-family: "Varela Round", sans-serif;
-              font-weight: 500 !important;
             }
             .view {
               height: 100vh;

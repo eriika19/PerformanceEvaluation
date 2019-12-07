@@ -1,7 +1,6 @@
 import { Component } from "react";
 import Head from "next/head";
 import Fade from "react-reveal/Fade";
-//import Link from "next/link";
 
 import Layout from "../components/Layout";
 import User from "../components/User";

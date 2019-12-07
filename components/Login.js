@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Link from "next/link";
 
 const Login = () => (
@@ -15,9 +17,13 @@ const Login = () => (
               className="input"
               required
             />
-            <span className="icon is-small is-left">
+            <FontAwesomeIcon
+              className="icon is-small is-left"
+              icon="envelope"
+            />
+            {/*             <span className="icon is-small is-left">
               <i className="fa fa-envelope"></i>
-            </span>
+            </span> */}
           </div>
         </div>
         <div className="field">
@@ -31,9 +37,14 @@ const Login = () => (
               className="input"
               required
             />
-            <span className="icon is-small is-left">
+            <FontAwesomeIcon
+              className="icon is-small is-left"
+              icon="lock"
+            />
+
+{/*             <span className="icon is-small is-left">
               <i className="fa fa-lock"></i>
-            </span>
+            </span> */}
           </div>
         </div>
         <div className="field">
@@ -49,7 +60,6 @@ const Login = () => (
         </div>
       </form>
     </div>
-    <style jsx>{``}</style>
   </section>
 );
 

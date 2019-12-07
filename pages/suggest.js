@@ -25,9 +25,9 @@ const Suggest = () => (
     </section>
     <section className="container">
     <div className="columns is-mobile is-multiline">
-      {laboratorians.map(laboratorianimg => {
+      {laboratorians.map((laboratorianimg, i) => {
         return (
-          <figure className="column image is-rounded is-96x96">
+          <figure className="hvr-grow column image is-rounded is-96x96" key={i}>
             <img className="is-rounded" src={laboratorianimg} />
           </figure>
         );
