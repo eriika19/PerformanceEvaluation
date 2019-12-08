@@ -10,7 +10,7 @@ import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 
 library.add( faEnvelope, faLock );
 
-import OfflineSupport from "../components/OfflineSupport";
+//import OfflineSupport from "../components/OfflineSupport";
 import Header from "../components/Header";
 
 class MyApp extends App {
@@ -30,7 +30,7 @@ class MyApp extends App {
     return (
       <div>
         <Header />
-        <OfflineSupport />
+        {/* <OfflineSupport /> */}
         <Component {...pageProps} />
         <style jsx global>
           {`

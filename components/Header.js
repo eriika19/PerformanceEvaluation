@@ -49,7 +49,7 @@ class Header extends Component {
 }
 
 const Loader = ({ loading }) => (
-  <div className={loading ? "pageloader is-active" : "pageloader"}><span class="title">Cargando</span></div>
+  <div className={loading ? "pageloader is-active" : "pageloader"}><span className="title">Cargando</span></div>
 );
 
 export default Header;

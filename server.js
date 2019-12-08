@@ -15,27 +15,26 @@ const ssrCache = new cache({
   maxAge: 1000 * 60 * 5 // 5 mins
 });
 
-app
-  .prepare()
-  .then(() => {
-    const server = express();
+app.prepare().then(() => {
+  const server = express();
 
-      createServer((req, res) => {
+  createServer((req, res) => {
     const parsedUrl = parse(req.url, true);
-    const rootStaticFiles = [
-      '/favicon.ico',
-    ];
+    const { pathname } = parsedUrl;
 
-    if (rootStaticFiles.indexOf(parsedUrl.pathname) > -1) {
-      const path = join(__dirname, 'static', parsedUrl.pathname);
-      app.serveStatic(req, res, path);
+    // handle GET request to /service-worker.js
+    /*       if (pathname === '/service-worker.js') {
+        const filePath = join(__dirname, '.next', pathname)
+
+
+      app.serveStatic(req, res, filePath);
     } else {
       handle(req, res, parsedUrl);
-    }
+    } */
 
-    /*   server.get("/", (req, res) => {
-    renderAndCache(req, res, "/");
-  }); */
+    /*     server.get("/", (req, res) => {
+      renderAndCache(req, res, "/");
+    }); */
 
     server.get("/question/:id", (req, res) => {
       const queryParams = { id: req.params.id };
@@ -43,21 +42,20 @@ app
     });
 
     server.get("*", (req, res) => {
-      if (req.url.includes("/sw")) {
-        const filePath = join(__dirname, "static", "workbox", "sw.js");
+      if (req.url.includes("/service-worker")) {
+        const filePath = join(__dirname, ".next", pathname);
         app.serveStatic(req, res, filePath);
-      } else if (req.url.startsWith("static/workbox/")) {
+      } else if (req.url.startsWith(".next/")) {
         app.serveStatic(req, res, join(__dirname, req.url));
       } else {
         handle(req, res, req.url);
       }
     });
-  })
-  .listen(PORT, err => {
+  }).listen(PORT, err => {
     if (err) throw err;
     console.log(`> Live on http://localhost:${PORT}`);
   });
-  });
+});
 
 async function renderAndCache(req, res, pagePath, queryParams) {
   const key = req.url;

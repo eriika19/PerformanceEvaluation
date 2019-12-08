@@ -17,10 +17,10 @@ const Login = () => (
               className="input"
               required
             />
-            <FontAwesomeIcon
-              className="icon is-small is-left"
-              icon="envelope"
-            />
+            <span className="icon is-small is-left">
+              <FontAwesomeIcon className="fas" icon="envelope" />
+            </span>
+
             {/*             <span className="icon is-small is-left">
               <i className="fa fa-envelope"></i>
             </span> */}
@@ -37,12 +37,10 @@ const Login = () => (
               className="input"
               required
             />
-            <FontAwesomeIcon
-              className="icon is-small is-left"
-              icon="lock"
-            />
-
-{/*             <span className="icon is-small is-left">
+            <span className="icon is-small is-left">
+              <FontAwesomeIcon className="fas" icon="lock" />
+            </span>
+            {/*             <span className="icon is-small is-left">
               <i className="fa fa-lock"></i>
             </span> */}
           </div>
