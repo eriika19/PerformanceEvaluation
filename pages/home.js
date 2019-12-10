@@ -15,25 +15,23 @@ class Home extends Component {
 
     return (
       <Layout>
-        <Fade right>        
-        
-        <section id="home" className="container">
-          <Head>
-            <title>Runa | Performance Evaluation</title>
-          </Head>
-          <section className="hero">
-            <User user={user} thumbnail={thumbnail} role={role} />
-            <div className="hero-body">
-              <div className="container">
-                <h1 className="title">¡Hola {user}! </h1>
-                <h2 className="subtitle">¿Estás listx para comenzar?</h2>
+        <Fade right>
+          <section id="home" className="container">
+            <Head>
+              <title>Runa | Performance Evaluation</title>
+            </Head>
+            <section className="hero">
+              <User user={user} thumbnail={thumbnail} role={role} />
+              <div className="hero-body">
+                <div className="container">
+                  <h1 className="title">¡Hola {user}! </h1>
+                  <h2 className="subtitle">¿Estás listx para comenzar?</h2>
+                </div>
               </div>
-            </div>
+            </section>
+            <QuestionBtn text="Ir a encuesta" id={id + 1} />
           </section>
-          <QuestionBtn text="Ir a encuesta" id={id + 1} />
-          </section>
-        </Fade>        
-          
+        </Fade>
       </Layout>
     );
   }

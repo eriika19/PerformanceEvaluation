@@ -2,36 +2,72 @@ import { Component } from "react";
 import Head from "next/head";
 import Fade from "react-reveal/Fade";
 
-import Splash from "../components/Splash";
 import Login from "../components/Login";
+
+const Splash = ({ load }) => (
+  <Fade big cascade>
+  <div
+    id="splash"
+    className={
+      load ? " splash is-bg-purple view hide" : " splash is-bg-purple view"
+    }
+  >
+    <figure className=" level-item image logo">
+      <img className="logo" src="/assets/runa-white.png" alt="logo" />
+    </figure>
+    <style jsx>
+      {`
+        .splash {
+          padding-top: 40vh;
+          transition: all 5s ease-out;
+        }
+        .logo img {
+          width: 8rem;
+          height: auto;
+          top: 50hv;
+        }
+      `}
+    </style>
+    </div>
+    </Fade>
+);
 
 class Index extends Component {
   state = {
-    scrolled: ""
+    load: ""
   };
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll, true);
+    window.addEventListener("load", this.handleLoad);
+   // window.addEventListener("scroll", this.handleScroll, true);
     this.setState({
-      scrolled: 0
+      load: false
     });
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
+  handleLoad = () => {
+    setTimeout(
+      this.setState({
+        load: true
+      }),
+      3000
+    );
+  };
 
   handleScroll = () => {
-    this.setState({
-      scrolled: window.deltaY
-    });
+    setTimeout(
+      this.setState({
+        load: true
+      }),
+      300
+    );
   };
 
   render() {
-    const { scrolled } = this.state;
+    const { load } = this.state;
     return (
-      <div>
-        <Splash scrolled={scrolled} />
+      <section>
+        <Splash load={load} />
         <Fade right>
           <section id="index" className="container view">
             <Head>
@@ -51,12 +87,8 @@ class Index extends Component {
             <Login />
           </section>
         </Fade>
-        <style jsx>
-          {`
-
-          `}
-        </style>
-      </div>
+        <style jsx>{``}</style>
+      </section>
     );
   }
 }

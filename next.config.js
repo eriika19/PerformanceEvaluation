@@ -1,15 +1,19 @@
 const withCSS = require("@zeit/next-css");
 const withOffline = require("next-offline");
-const { withPlugins, optional } = require("next-compose-plugins");
+const { withPlugins } = require("next-compose-plugins");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
-const NextWorkboxPlugin = require("next-workbox-webpack-plugin");
+//const NextWorkboxPlugin = require("next-workbox-webpack-plugin");
 const path = require("path");
 
 const nextConfig = {
   workboxOpts: {
     clientsClaim: true,
     skipWaiting: true,
-    swDest: path.join(__dirname, "public/service-worker.js"),
+    modifyURLPrefix: {
+      ".next": "/_next"
+    },
+   // generateInDevMode: true,
+   //swDest: path.join(__dirname, "service-worker.js"),
 
     runtimeCaching: [
       {
@@ -28,8 +32,11 @@ const nextConfig = {
         options: {
           cacheName: "api-cache",
           cacheableResponse: {
-            statuses: [200]
-          }
+            statuses: [0, 200],
+            headers: {
+              'x-test': 'true'
+            }
+        }
         }
       },
       {
@@ -51,7 +58,7 @@ const nextConfig = {
     ]
   },
 
-  webpack(config, { isServer, buildId, dev }) {
+  webpack(config, { isServer }) {
     // Fixes npm packages that depend on `fs` module
     config.node = {
       fs: "empty"
@@ -71,10 +78,6 @@ const nextConfig = {
     const PUBLIC_PATH = "..";
 
     config.plugins.push(
-      /*       new NextWorkboxPlugin({
-          buildId,
-          ...workboxOptions
-        }), */
 
       new WebpackPwaManifest({
         filename: "static/manifest.json",
@@ -119,7 +122,7 @@ const nextConfig = {
   }
 };
 
-//module.exports = withCSS(nextConfig);
+/* module.exports = withCSS(nextConfig);
+module.exports = withOffline(nextConfig) */
 
-//module.exports = withOffline(nextConfig)
 module.exports = withPlugins([[withCSS], [withOffline]], nextConfig);

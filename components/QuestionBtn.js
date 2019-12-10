@@ -1,7 +1,7 @@
+  
 import { Component } from "react";
 import Router from "next/router";
 import Link from "next/link";
-
 
 class QuestionBtn extends Component {
   prefetchQuestionPage = () => {

@@ -1,6 +1,8 @@
 import App from "next/app";
 import "bulma/css/bulma.min.css";
 import "hover.css/css/hover-min.css";
+import "bulma-pageloader/dist/css/bulma-pageloader.min.css";
+
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css"; // Import the CSS
 config.autoAddCss = false;
@@ -10,7 +12,6 @@ import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 
 library.add( faEnvelope, faLock );
 
-//import OfflineSupport from "../components/OfflineSupport";
 import Header from "../components/Header";
 
 class MyApp extends App {
@@ -28,9 +29,8 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <div>
+      <section>
         <Header />
-        {/* <OfflineSupport /> */}
         <Component {...pageProps} />
         <style jsx global>
           {`
@@ -56,11 +56,15 @@ class MyApp extends App {
               padding-top: 8rem;
             }
             .button {
-              border-width:0.12rem;
+              border-width: 0.12rem;
+            }
+            .is-bg-orange {
+              background-color: #8378f4;
+              color: #fff;
             }
           `}
         </style>
-      </div>
+      </section>
     );
   }
 }

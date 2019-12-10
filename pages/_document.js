@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html>
         <Head />
         <body>
-          <noscript>You need to enable JavaScript to run this app.</noscript>
+          <noscript>For a better experience of this app enable JavaScript.</noscript>
           <Main />
           <NextScript />
         </body>

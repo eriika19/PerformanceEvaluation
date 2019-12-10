@@ -1,6 +1,4 @@
 import { Component } from "react";
-import Link from "next/link";
-//import "bulma/css/bulma.min.css";
 
 import NavbarItem from "./NavbarItem";
 

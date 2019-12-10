@@ -5,7 +5,7 @@ const express = require("express");
 const next = require("next");
 const cache = require("lru-cache"); // for using least-recently-used based caching
 
-const PORT = 8000;
+const PORT = 3000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -16,44 +16,34 @@ const ssrCache = new cache({
 });
 
 app.prepare().then(() => {
-  const server = express();
+  const { get } = express();
 
   createServer((req, res) => {
     const parsedUrl = parse(req.url, true);
     const { pathname } = parsedUrl;
 
-    // handle GET request to /service-worker.js
-    /*       if (pathname === '/service-worker.js') {
-        const filePath = join(__dirname, '.next', pathname)
-
-
-      app.serveStatic(req, res, filePath);
-    } else {
-      handle(req, res, parsedUrl);
-    } */
-
-    /*     server.get("/", (req, res) => {
+/*     get("/", (req, res) => {
       renderAndCache(req, res, "/");
-    }); */
+    });
 
-    server.get("/question/:id", (req, res) => {
+    get("/question/:id", (req, res) => {
       const queryParams = { id: req.params.id };
       renderAndCache(req, res, "/question", queryParams);
-    });
+    }); */
 
-    server.get("*", (req, res) => {
-      if (req.url.includes("/service-worker")) {
+    // handle GET request to /service-worker.js
+   // get("*", (req, res) => {
+      if (pathname === "/service-worker.js") {
         const filePath = join(__dirname, ".next", pathname);
+
         app.serveStatic(req, res, filePath);
-      } else if (req.url.startsWith(".next/")) {
-        app.serveStatic(req, res, join(__dirname, req.url));
       } else {
-        handle(req, res, req.url);
+        handle(req, res, parsedUrl);
       }
-    });
+  //  });
   }).listen(PORT, err => {
     if (err) throw err;
-    console.log(`> Live on http://localhost:${PORT}`);
+    console.log(`> Ready on http://localhost:${PORT}`);
   });
 });
 

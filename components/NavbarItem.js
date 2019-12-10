@@ -1,10 +1,9 @@
-import { Component } from "react";
 //import Link from "next/link";
 
-const NavbarItem = props => (
+const NavbarItem = ({section}) => (
   //   <Link href={route}>
   <a className="navbar-item">
-    {props.section}
+    {section}
     <style jsx>
       {`
         a.navbar-item {

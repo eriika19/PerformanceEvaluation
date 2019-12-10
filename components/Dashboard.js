@@ -1,7 +1,7 @@
 import { Chart } from "react-google-charts";
 
-const Dashboard = props => {
-  if (props.data === null) {
+const Dashboard = ({ data, name }) => {
+  if (data === null) {
     return (
       <div className="container">
         <h1 className="title is-3 is-spaced">
@@ -11,7 +11,7 @@ const Dashboard = props => {
       </div>
     );
   }
-  if (props.data === false) {
+  if (data === false) {
     return (
       <div className="container">
         <h1 className="title is-3 is-spaced">
@@ -21,34 +21,31 @@ const Dashboard = props => {
       </div>
     );
   } else {
-    const { data, name } = props
-
     return (
-      <section id="dashboard" >
+      <section id="dashboard">
         <h1 className="title">Gráfica de desempeño</h1>
-      <article  className="media">
-
-        <div className="media-content">
-          <Chart
-            chartType="ColumnChart"
-            loader={<div>Loading Chart</div>}
-            data={ data }
-            options={{
-              title: name,
-              chartArea: { width: "70%" },
-              hAxis: {
-                title: "Valores",
-                minValue: 0
-              },
-              vAxis: {
-                title: "Indicador"
-              }
-            }}
-            legendToggle
-          />
-        </div>
+        <article className="media">
+          <div className="media-content">
+            <Chart
+              chartType="ColumnChart"
+              loader={<div>Loading Chart</div>}
+              data={data}
+              options={{
+                title: name,
+                chartArea: { width: "70%" },
+                hAxis: {
+                  title: "Valores",
+                  minValue: 0
+                },
+                vAxis: {
+                  title: "Indicador"
+                }
+              }}
+              legendToggle
+            />
+          </div>
         </article>
-        </section>
+      </section>
     );
   }
 };

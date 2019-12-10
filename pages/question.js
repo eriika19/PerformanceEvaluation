@@ -57,7 +57,8 @@ class QuestionPage extends Component {
                   </figure>
                   <p>
                     Esta es mi <br />
-                    habilidad<br /> 
+                    habilidad
+                    <br />
                     destacada
                   </p>
                 </div>
@@ -204,22 +205,23 @@ class QuestionPage extends Component {
 }
 
 QuestionPage.getInitialProps = async ({ query: { id } }) => {
-  const index = parseInt(id, 10) - 1;
+    const index = parseInt(id, 10) - 1;
 
-  const res = await fetch("https://sheetsu.com/apis/v1.0su/a25c2c2fd334");
-  const data = await res.json();
+    const res = await fetch("https://sheetsu.com/apis/v1.0su/a25c2c2fd334");
+    const data = await res.json();
 
-  if (data[index] !== undefined) {
-    const { question } = data[index];
-    return {
-      question,
-      id
-    };
-  } else {
-    return {
-      id
-    };
-  }
-};
+    if (data[index] !== undefined) {
+      const { question } = data[index];
+      return {
+        question,
+        id
+      };
+    } else {
+      return {
+        id
+      };
+    }
+  };
+
 
 export default QuestionPage;
